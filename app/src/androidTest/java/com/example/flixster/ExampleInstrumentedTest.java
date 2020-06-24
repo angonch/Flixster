@@ -1,4 +1,4 @@
-package com.example.flix;
+package com.example.flixster;
 
 import android.content.Context;
 
