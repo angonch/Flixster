@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MovieDetailsActivity">
+    tools:context=".MovieDetailsActivity"
+    android:background="?attr/bgColor">
 
     <TextView
         android:id="@+id/tvTitle"
@@ -15,6 +16,7 @@
         android:layout_marginStart="5dp"
         android:layout_marginTop="5dp"
         android:text="Title"
+        android:textColor="?attr/textColor"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         tools:layout_editor_absoluteX="45dp"
         tools:layout_editor_absoluteY="33dp" />
@@ -39,5 +41,6 @@
         android:layout_alignParentStart="true"
         android:layout_marginStart="5dp"
         android:layout_marginTop="0dp"
-        android:text="Overview text" />
+        android:text="Overview text"
+        android:textColor="?attr/metaTextColor"/>
 </RelativeLayout>

@@ -28,10 +28,14 @@ public class MainActivity extends AppCompatActivity {
 
     List<Movie> movies;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setTheme(R.style.DarkTheme);
         setContentView(R.layout.activity_main);
+
+
         RecyclerView rvMovies = findViewById(R.id.rvMovies);
         movies = new ArrayList<>(); // Instantiate movies - later modified when response received from API
 
@@ -67,5 +71,6 @@ public class MainActivity extends AppCompatActivity {
                 Log.d(TAG, "onFailure");
             }
         });
+
     }
 }
