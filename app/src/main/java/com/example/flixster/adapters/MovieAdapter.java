@@ -13,10 +13,13 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
+import com.bumptech.glide.load.resource.bitmap.CenterInside;
 import com.example.flixster.R;
 import com.example.flixster.models.Movie;
 
 import java.util.List;
+
+import jp.wasabeef.glide.transformations.RoundedCornersTransformation;
 
 public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.ViewHolder> {
 
@@ -66,7 +69,6 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.ViewHolder> 
             tvTitle = itemView.findViewById(R.id.tvTitle);
             tvOverview = itemView.findViewById(R.id.tvOverview);
             ivPoster = itemView.findViewById(R.id.ivPoster);
-
         }
 
         // Populate each views with movie properties
@@ -77,8 +79,10 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.ViewHolder> 
             // landscape = backdrop, portrait = poster
             String imageURL = (context.getResources().getConfiguration().orientation
                     == Configuration.ORIENTATION_LANDSCAPE) ? movie.getBackdropPath() : movie.getPosterPath();
-
-            Glide.with(context).load(imageURL).into(ivPoster);
+            int radius = 30; // corner radius
+            int margin = 5;
+            Glide.with(context).load(imageURL)
+                    .transform(new CenterInside(), new RoundedCornersTransformation(radius, margin)).into(ivPoster);
         }
     }
 }
