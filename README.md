@@ -2,7 +2,7 @@
 
 Flixster shows the latest movies currently playing in theaters. The app utilizes the Movie Database API to display images and basic information about these movies to the user.
 
-Time spent: 12 hours spent in total
+Time spent: 15 hours spent in total
 
 ## User Stories
 
@@ -17,9 +17,9 @@ The following **required** functionality is completed:
 
 The following **stretch** features are implemented:
 
-* [ ] Improved the user interface by experimenting with styling and coloring.
+* [X] Improved the user interface by experimenting with styling and coloring.
 * [X] Apply rounded corners for the poster or background images using [Glide transformations](https://guides.codepath.org/android/Displaying-Images-with-the-Glide-Library#transformations)
-* [ ] Apply the popular [View Binding annotation library](http://guides.codepath.org/android/Reducing-View-Boilerplate-with-ViewBinding) to reduce boilerplate code.
+* [X] Apply the popular [View Binding annotation library](http://guides.codepath.org/android/Reducing-View-Boilerplate-with-ViewBinding) to reduce boilerplate code.
 * [ ] Allow video trailers to be played in full-screen using the YouTubePlayerView from the details screen.
 
 The following **additional** features are implemented:
@@ -30,13 +30,19 @@ The following **additional** features are implemented:
 
 Here's a walkthrough of implemented user stories:
 
-<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+![Flixster App Demo Link](screenshots/Flixster.gif)
 
-GIF created with [LiceCap](http://www.cockos.com/licecap/).
+GIF created with [Kap](http://www.getkap.co).
 
 ## Notes
 
-Describe any challenges encountered while building the app.
+A challenge I faced while making this app was understanding how information is passed between activities
+using Parcels, so I carefully read the flow of the code to understand what information was needed
+and why Parcel was used to wrap objects Activities cannot read like my Movie class. Another
+challenge was trying to implement the YouTube player inside the detail view. I tried doing this stretch
+goal multiple times but had a lot of difficulty getting it to work (so I'm submitting a version without it).
+Finally, I also played around with UI in this project. I discovered that you can make an attributes file and
+that actions can be added to the action bar with a menu directory.
 
 ## Open-source libraries used
 
