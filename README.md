@@ -38,11 +38,13 @@ GIF created with [Kap](http://www.getkap.co).
 
 A challenge I faced while making this app was understanding how information is passed between activities
 using Parcels, so I carefully read the flow of the code to understand what information was needed
-and why Parcel was used to wrap objects Activities cannot read like my Movie class. Another
-challenge was trying to implement the YouTube player inside the detail view. I tried doing this stretch
-goal multiple times but had a lot of difficulty getting it to work (so I'm submitting a version without it).
-Finally, I also played around with UI in this project. I discovered that you can make an attributes file and
-that actions can be added to the action bar with a menu directory.
+and why Parcel was used to wrap objects Activities cannot read like my Movie class. It was also challenging
+to understand the ViewBinding simplification, and I am not sure whether I implemented it in all the
+correct spots (for example I did not use it in the adapter class) Another challenge was trying to implement
+the YouTube player inside the detail view. I tried doing this stretch goal multiple times but had a lot
+of difficulty getting it to work (so I'm submitting a version without it). Finally, I also played
+around with UI in this project. I discovered that you can make an attributes file and that actions can be added
+to the action bar with a menu directory.
 
 ## Open-source libraries used
 
