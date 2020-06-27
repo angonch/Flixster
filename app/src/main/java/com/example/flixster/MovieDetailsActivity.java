@@ -11,6 +11,7 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.bumptech.glide.Glide;
+import com.bumptech.glide.load.resource.bitmap.CenterInside;
 import com.codepath.asynchttpclient.AsyncHttpClient;
 import com.codepath.asynchttpclient.callback.JsonHttpResponseHandler;
 import com.example.flixster.databinding.ActivityMovieDetailsBinding;
@@ -23,6 +24,7 @@ import org.parceler.Parcels;
 
 import java.util.List;
 
+import jp.wasabeef.glide.transformations.RoundedCornersTransformation;
 import okhttp3.Headers;
 
 public class MovieDetailsActivity extends AppCompatActivity {
@@ -59,7 +61,7 @@ public class MovieDetailsActivity extends AppCompatActivity {
         tvOverview.setText(movie.getOverview());
         float voteAverage = movie.getVoteAverage().floatValue();
         rbVoteAverage.setRating((voteAverage > 0) ? (voteAverage / 2.0f) : voteAverage);
-        Glide.with(getApplicationContext()).load(movie.getBackdropPath()).into(ivBackdrop);
+        Glide.with(getApplicationContext()).load(movie.getBackdropPath()).transform(new CenterInside(), new RoundedCornersTransformation(30, 10)).into(ivBackdrop);
 
         String VIDEO_URL = "https://api.themoviedb.org/3/movie/" + movie.getId().toString() + "/videos?api_key=c622cdaa84b981fece025799de236e2b";
         // movie video api call
