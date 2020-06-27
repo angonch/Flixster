@@ -30,7 +30,7 @@ The following **additional** features are implemented:
 
 Here's a walkthrough of implemented user stories:
 
-![Flixster App Demo Link](screenshots/Flixster.gif)
+![Flixster App Demo Link](screenshots/Flixster_demo.gif)
 
 GIF created with [Kap](http://www.getkap.co).
 
