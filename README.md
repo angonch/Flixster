@@ -20,7 +20,7 @@ The following **stretch** features are implemented:
 * [X] Improved the user interface by experimenting with styling and coloring.
 * [X] Apply rounded corners for the poster or background images using [Glide transformations](https://guides.codepath.org/android/Displaying-Images-with-the-Glide-Library#transformations)
 * [X] Apply the popular [View Binding annotation library](http://guides.codepath.org/android/Reducing-View-Boilerplate-with-ViewBinding) to reduce boilerplate code.
-* [ ] Allow video trailers to be played in full-screen using the YouTubePlayerView from the details screen.
+* [X] Allow video trailers to be played in full-screen using the YouTubePlayerView from the details screen.
 
 The following **additional** features are implemented:
 
@@ -41,10 +41,9 @@ using Parcels, so I carefully read the flow of the code to understand what infor
 and why Parcel was used to wrap objects Activities cannot read like my Movie class. It was also challenging
 to understand the ViewBinding simplification, and I am not sure whether I implemented it in all the
 correct spots (for example I did not use it in the adapter class) Another challenge was trying to implement
-the YouTube player inside the detail view. I tried doing this stretch goal multiple times but had a lot
-of difficulty getting it to work (so I'm submitting a version without it). Finally, I also played
-around with UI in this project. I discovered that you can make an attributes file and that actions can be added
-to the action bar with a menu directory.
+the YouTube player inside the detail view, because it took me a while to understand where the API call
+and listener should be made to play the video. Finally, I also played around with UI in this project. I discovered
+that you can make an attributes file and that actions can be added to the action bar with a menu directory.
 
 ## Open-source libraries used
 
